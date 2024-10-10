@@ -1,6 +1,6 @@
 package teatr;
 
-public class Spektakl {
+public class Spectacle {
     //Struct
     private String title;
     private int DD;
