@@ -25,12 +25,15 @@ public class Main {
         System.out.println("Ticket Information:");
 
         ticket1.showInfo();
+        System.out.println(ticket1.getSeatNumber());
         System.out.println();
 
         ticket2.showInfo();
+        System.out.println(ticket2.getSeatNumber());
         System.out.println();
 
         ticket3.showInfo();
+        System.out.println(ticket3.getSeatNumber());
         System.out.println();
 
         // Attempting to create a ticket for an already taken seat
