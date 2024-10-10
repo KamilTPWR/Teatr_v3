@@ -1,88 +1,78 @@
 package teatr;
 
 public class Spektakl {
-    // Prywatne pola
-    private String tytul;
-    private int day;
-    private int month;
-    private int year;
-    private int liczbaMiejsc;
+    //Struct
+    private String title;
+    private int DD;
+    private int MM;
+    private int YYYY;
+    private int number_of_seats;
 
-    // Konstruktor klasy Spektakl
-    public Spektakl(String tytul, int day, int month, int year, int liczbaMiejsc) {
-        this.tytul = tytul;
-        this.setDay(day);  // Używamy setterów, żeby zastosować walidację
-        this.setMonth(month);
-        this.setYear(year);
-        this.liczbaMiejsc = liczbaMiejsc;
+    //Constructor
+    public Spektakl(String title, int DD, int MM, int YYYY, int number_of_seats) {
+        this.title = title;
+        this.setDD(DD);
+        this.setMM(MM);
+        this.setYYYY(YYYY);
+        this.number_of_seats = number_of_seats;
     }
 
-    // Getter do tytułu spektaklu
-    public String getTytul() {
-        return tytul;
+    //Setters and Getters
+    public String gettitle() {
+        return title;
     }
 
-    // Setter do tytułu spektaklu
-    public void setTytul(String tytul) {
-        this.tytul = tytul;
+    public void settitle(String title) {
+        this.title = title;
     }
 
-    // Getter do dnia
-    public int getDay() {
-        return day;
+    public int getDD() {
+        return DD;
     }
 
-    // Setter do dnia (z walidacją)
-    public void setDay(int day) {
-        if (day > 0 && day <= 31) {
-            this.day = day;
+    public void setDD(int DD) {
+        if (DD > 0 && DD <= 31) {
+            this.DD = DD;
         } else {
-            System.out.println("Błędna wartość dnia. Podaj wartość od 1 do 31.");
+            System.out.println("Invalid day. Please enter a value from 1 to 31.");
         }
     }
 
-    // Getter do miesiąca
-    public int getMonth() {
-        return month;
+    public int getMM() {
+        return MM;
     }
 
-    // Setter do miesiąca (z walidacją)
-    public void setMonth(int month) {
-        if (month > 0 && month <= 12) {
-            this.month = month;
+    public void setMM(int MM) {
+        if (MM > 0 && MM <= 12) {
+            this.MM = MM;
         } else {
-            System.out.println("Błędna wartość miesiąca. Podaj wartość od 1 do 12.");
+            System.out.println("Invalid month. Please enter a value from 1 to 12.");
         }
     }
 
-    // Getter do roku
-    public int getYear() {
-        return year;
+    public int getYYYY() {
+        return YYYY;
     }
 
-    // Setter do roku (z walidacją)
-    public void setYear(int year) {
-        if (year >= 2020 && year <= 2050) {
-            this.year = year;
+    public void setYYYY(int YYYY) {
+        if (YYYY >= 2020 && YYYY <= 2050) {
+            this.YYYY = YYYY;
         } else {
-            System.out.println("Błędna wartość roku. Podaj rok pomiędzy 2020 a 2050.");
+            System.out.println("Invalid year. Please enter a value from 1 to 12.");
         }
     }
 
-    // Getter do liczby miejsc
-    public int getLiczbaMiejsc() {
-        return liczbaMiejsc;
+    public int getnumber_of_seats() {
+        return number_of_seats;
     }
 
-    // Setter do liczby miejsc
-    public void setLiczbaMiejsc(int liczbaMiejsc) {
-        this.liczbaMiejsc = liczbaMiejsc;
+    public void setnumber_of_seats(int number_of_seats) {
+        this.number_of_seats = number_of_seats;
     }
 
-    // Metoda do wyświetlania informacji o spektaklu
-    public void wyswietlInformacje() {
-        System.out.println("Tytuł: " + tytul);
-        System.out.println("Data: " + day + "/" + month + "/" + year);
-        System.out.println("Liczba miejsc: " + liczbaMiejsc);
+    public void showinfo() {
+        System.out.println("Title: " + title);
+        System.out.println("Date: " + DD + "/" + MM + "/" + YYYY);
+        System.out.println("Number of seats: " + number_of_seats);
     }
 }
