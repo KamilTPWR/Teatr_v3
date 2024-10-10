@@ -1,6 +1,6 @@
 package teatr;
 
-public class Spektakl {
+public class Spectacle {
     //Struct
     private String title;
     private int DD;
@@ -9,7 +9,7 @@ public class Spektakl {
     private int number_of_seats;
 
     //Constructor
-    public Spektakl(String title, int DD, int MM, int YYYY, int number_of_seats) {
+    public Spectacle(String title, int DD, int MM, int YYYY, int number_of_seats) {
         this.title = title;
         this.setDD(DD);
         this.setMM(MM);
@@ -18,18 +18,16 @@ public class Spektakl {
     }
 
     //Setters and Getters
-    public String gettitle() {
+    public String getTitle() {
         return title;
     }
-
-    public void settitle(String title) {
+    public void setTitle(String title) {
         this.title = title;
     }
 
     public int getDD() {
         return DD;
     }
-
     public void setDD(int DD) {
         if (DD > 0 && DD <= 31) {
             this.DD = DD;
@@ -41,7 +39,6 @@ public class Spektakl {
     public int getMM() {
         return MM;
     }
-
     public void setMM(int MM) {
         if (MM > 0 && MM <= 12) {
             this.MM = MM;
@@ -53,7 +50,6 @@ public class Spektakl {
     public int getYYYY() {
         return YYYY;
     }
-
     public void setYYYY(int YYYY) {
         if (YYYY >= 2020 && YYYY <= 2050) {
             this.YYYY = YYYY;
@@ -62,15 +58,14 @@ public class Spektakl {
         }
     }
 
-    public int getnumber_of_seats() {
+    public int setNumber_of_seats() {
         return number_of_seats;
     }
-
-    public void setnumber_of_seats(int number_of_seats) {
+    public void setNumber_of_seats(int number_of_seats) {
         this.number_of_seats = number_of_seats;
     }
 
-    public void showinfo() {
+    public void showInfo() {
         System.out.println("Title: " + title);
         System.out.println("Date: " + DD + "/" + MM + "/" + YYYY);
         System.out.println("Number of seats: " + number_of_seats);
