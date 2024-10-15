@@ -12,13 +12,6 @@ public class TheaterHall {
         this.location = location;
     }
 
-    // Method to display hall information
-    public void displayInfo() {
-        System.out.println("Hall Name: " + hallName);
-        System.out.println("Capacity: " + capacity);
-        System.out.println("Location: " + location);
-    }
-
     //Getters
     public String getHallName() {
         return hallName;
@@ -31,9 +24,9 @@ public class TheaterHall {
     }
 
     //Methods
-    public void showInfo() {
-        System.out.println("Title: " + title);
-        System.out.println("Date: " + DD + "/" + MM + "/" + YYYY);
-        System.out.println("Number of seats: " + number_of_seats);
+    public void displayInfo() {
+        System.out.println("Hall Name: " + hallName);
+        System.out.println("Capacity: " + capacity);
+        System.out.println("Location: " + location);
     }
 }
