@@ -61,10 +61,8 @@ public class Spectacle {
     public int setNumber_of_seats() {
         return number_of_seats;
     }
-    public void setNumber_of_seats(int number_of_seats) {
-        this.number_of_seats = number_of_seats;
-    }
 
+    //Methods
     public void showInfo() {
         System.out.println("Title: " + title);
         System.out.println("Date: " + DD + "/" + MM + "/" + YYYY);
