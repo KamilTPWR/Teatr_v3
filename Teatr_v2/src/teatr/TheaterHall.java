@@ -1,9 +1,9 @@
 package teatr;
 
 public class TheaterHall {
-    private String hallName;
-    private int capacity; // Total number of seats
-    private int flor; // Optional: hall's flor or description
+    private final String hallName;
+    private final int capacity; // Total number of seats
+    private final int flor; // Optional: hall's flor or description
 
     // Constructor
     public TheaterHall(String hallName, int capacity, int flor) {
