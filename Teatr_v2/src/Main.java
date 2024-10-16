@@ -1,4 +1,5 @@
 import teatr.*;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -36,7 +37,7 @@ public class Main {
         System.out.println(ticket3.getSeatNumber());
         System.out.println();
 
-        TheaterHall theaterHall3 = new TheaterHall("A1",150,2);
+        TheaterHall theaterHall3 = new TheaterHall("A1", 150, 2);
         theaterHall3.showInfo();
         System.out.println();
 
@@ -45,5 +46,61 @@ public class Main {
 
         // Displaying total tickets created
         System.out.println("Total Tickets Created: " + Ticket.getTicketCounter());
+
+        TheaterManager manager = new TheaterManager();
+        HumanInput input = new HumanInput(manager);
+        Scanner scanner = new Scanner(System.in);
+        boolean exit = false;
+
+
+        while (!exit) {
+            HumanInput.gapConsole();
+            System.out.println("=======================================");
+            System.out.println("||     Theater Management System      ||");
+            System.out.println("=======================================");
+            System.out.println("|| 1. Add Spectacle                   ||");
+            System.out.println("|| 2. Remove Spectacle                ||");
+            System.out.println("|| 3. List Spectacles                 ||");
+            System.out.println("|| 4. Add Theater Hall                ||");
+            System.out.println("|| 5. List Theater Halls              ||");
+            System.out.println("|| 6. Exit                            ||");
+            System.out.println("=======================================");
+            HumanInput.gapConsole();
+            System.out.print("Choose an option: ");
+
+            int choice = scanner.nextInt();
+            scanner.nextLine(); // consume the newline character left after nextInt()
+
+
+            switch (choice) {
+                case 1:
+                    HumanInput.clearConsole();
+                    input.addSpectacleFromConsole();
+                    break;
+                case 2:
+                    HumanInput.gapConsole();
+                    input.removeSpectacleFromConsole();
+                    break;
+                case 3:
+                    HumanInput.gapConsole();
+                    input.listSpectaclesFromConsole();
+                    break;
+                case 4:
+                    HumanInput.clearConsole();
+                    input.addHallFromConsole();
+                    break;
+                case 5:
+                    HumanInput.gapConsole();
+                    input.listHallsFromConsole();
+                    break;
+                case 6:
+                    exit = true;
+                    System.out.println("Exiting the program. Goodbye!");
+                    break;
+                default:
+                    System.out.println("Invalid choice. Please choose a valid option.");
+            }
+        }
+        scanner.close(); // Close the scanner when done
     }
 }

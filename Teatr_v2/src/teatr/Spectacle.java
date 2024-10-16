@@ -51,10 +51,10 @@ public class Spectacle {
         return YYYY;
     }
     public void setYYYY(int YYYY) {
-        if (YYYY >= 2020 && YYYY <= 2050) {
+        if (YYYY >= 2000 && YYYY <= 2050) {
             this.YYYY = YYYY;
         } else {
-            System.out.println("Invalid year. Please enter a value from 1 to 12.");
+            System.out.println("Invalid year. Please enter a value from 2000 to 2050.");
         }
     }
 
