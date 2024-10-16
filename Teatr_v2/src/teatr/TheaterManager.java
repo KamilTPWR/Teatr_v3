@@ -27,16 +27,40 @@ public class TheaterManager {
         }
         System.out.println("Spectacle: " + title + ", not found!");
     }
+
+    private String cutTitle(String title) {
+        int length = title.length();
+        String cutstring;
+        if (length < 18) {
+            return title;
+        }else{
+            cutstring = title.substring(0, 17);
+            cutstring = cutstring + "...";
+            return cutstring;
+        }
+    }
+
+
+
+
     public void listSpectacles() {
         if (spectacles.isEmpty()) {
             System.out.println("No spectacles available.");
         } else {
-            System.out.println("Available spectacles:");
+            System.out.println("===========================================================");
+            System.out.printf("|| %-20s || %-10s || %-15s ||%n", "Title", "Date", "Number of Seats");
+            System.out.println("===========================================================");
+
             for (int i = 0; i < spectacles.size(); i++) {
-                spectacles.get(i).showInfo(); // Access each spectacle by index
+                Spectacle spectacle = spectacles.get(i);
+                String formattedDate = String.format("%02d/%02d/%04d", spectacle.getDD(), spectacle.getMM(), spectacle.getYYYY());
+                System.out.printf("|| %-20s || %-10s || %-15d ||%n", cutTitle(spectacle.getTitle()), formattedDate, spectacle.getNumber_of_seats());
             }
+
+            System.out.println("===========================================================");
         }
     }
+
 
     //TheaterHalls management
     public void addHall(TheaterHall hall) {
