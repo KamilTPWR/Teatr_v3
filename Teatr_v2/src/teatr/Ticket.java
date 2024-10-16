@@ -37,7 +37,7 @@ public class Ticket {
     private int generateUniqueTicketId() {
         Random random = new Random();
         return 1000000000 + random.nextInt(900000000);
-        //Generates a number between 1000000000 and 1999999999; it's UniqueTicket Id
+        //Generates a number between 1000000000 and 1999999999; it's UniqueTicket Ids
     }
 
 //    public Spectacle getSpectacle() {

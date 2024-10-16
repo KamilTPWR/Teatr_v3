@@ -36,6 +36,10 @@ public class Main {
         System.out.println(ticket3.getSeatNumber());
         System.out.println();
 
+        TheaterHall theaterHall3 = new TheaterHall("A1",150,2);
+        theaterHall3.showInfo();
+        System.out.println();
+
         // Attempting to create a ticket for an already taken seat
         Ticket ticket4 = new Ticket(spectacle1, 10); // Attempt to use the same seat for Hamlet
 
