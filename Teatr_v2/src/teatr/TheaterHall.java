@@ -27,6 +27,6 @@ public class TheaterHall {
     public void showInfo() {
         System.out.println("Hall Name: " + hallName);
         System.out.println("Capacity: " + capacity);
-        System.out.println("Location: " + flor);
+        System.out.println("Flor: " + flor);
     }
 }
